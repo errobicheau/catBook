@@ -9,7 +9,11 @@ const catSchema = new mongoose.Schema({
     age: Number, 
     favoriteFood: String,
     funFact: String,
-    image: String
+    image: String,
+    owner: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    }
 })
 
 //remember to export mongoose model to be used in other locations
