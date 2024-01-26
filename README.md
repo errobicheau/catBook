@@ -11,8 +11,6 @@ CatBook is a trendy full-stack platform resembling a social network for cat owne
 CatBook is built on the Node.js engine with the Express.js framework. CatBook follows typical MVC structure for routing and displaying requests. MongoDB serves as the database for CatBook, receiving, storing, and sending data regarding cat posts. On the front end, CatBook uses EJS as a view engine to provide flexible rendering of new posts. Other tools include BootStrap for styling, Passport.js for local authentication, and Multer for file (photo) upload.
 
 ## Optimizations & Roadmap
-=======
-
 
 #### Optimizations
 CatBook is capable of handling create, read, upload, and delete actions from users. Built with Node, the back end of this app runs fantastically. To optimize CatBook in the future, I would look to utilize a more advanced front end framework, such as React.js, to dynamically receive and render data to the user.
