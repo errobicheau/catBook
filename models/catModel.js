@@ -13,7 +13,8 @@ const catSchema = new mongoose.Schema({
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
-    }
+    },
+    date: String,
 })
 
 //remember to export mongoose model to be used in other locations
