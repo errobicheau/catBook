@@ -1,10 +1,8 @@
 ![altTag](public/images/logos/cover.png)
 # CatBook - Full Stack Web Application
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+CatBook is a trendy full-stack platform resembling a social network for cat owners, serving as a 'feline-friendly' counterpart to Facebook.
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
-
-![alt tag](http://placecorgi.com/1200/650)
+**Link to project:** https://google.com
 
 ## How It's Made:
 

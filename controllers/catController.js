@@ -1,8 +1,8 @@
 //require catModel
 const Cat = require('../models/catModel')
 const multer = require('multer')
+const formatDate = require('../utils/formatDate')
 
-// multer config for image upload
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
       cb(null, './public/images');
@@ -17,7 +17,12 @@ const storage = multer.diskStorage({
 const getAllCats = async (req, res) => {
     try {
         const cats = await Cat.find().populate('owner')
-        res.render('home', {cats: cats, user: req.user}) //render home page, pass cat object with all cat data back. EJS reads cat data and renders on page
+        const catsWithFormattedDate = cats.map(cat => ({
+          ...cat._doc,
+          formattedDate: formatDate(cat.date),
+      }));
+
+        res.render('home', {cats: catsWithFormattedDate, user: req.user}) //render home page, pass cat object with all cat data back. EJS reads cat data and renders on page
     } catch (error) {
         console.log(error)
     }
@@ -36,10 +41,12 @@ const createCat = async (req, res) => {
             favoriteFood: req.body.favoriteFood,
             funFact: req.body.funFact,
             image: req.file.filename,
-            owner: req.user._id
+            owner: req.user._id,
+            date: new Date(),
     })
 
     await cat.save()
+    console.log(cat)
     res.redirect('/')
 
     } catch (error) {
