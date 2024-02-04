@@ -2,7 +2,9 @@
 # CatBook - Social Media... for Cats
 CatBook is a trendy full-stack platform resembling a social network for cat owners, serving as a feline-friendly counterpart to a popular social media app.
 
-**Link to project:** <- Link Coming Soon ->
+**Link to project:** [CatBook](https://catbook-38np.onrender.com/)
+
+Please note: due to the free hosting service, loading times on the first request may be considerable.
 
 ## How It's Made:
 
